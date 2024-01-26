@@ -11,7 +11,7 @@ public class Mart {
 		machine.pressButton(customer, "아메리카노");
 		
 		machine.insertMeney(customer, "에스프레소");
-		machine.pressButton(customer, "에스프레소");
+		machine.pressButton(customer, "에스프레소"); 
 		
 		machine.printProducts();
 		customer.printProduct();
