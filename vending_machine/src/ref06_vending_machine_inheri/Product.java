@@ -34,6 +34,7 @@ public class Product {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
 	
 	// 메서드 오버라이딩
 	// Object 클래스에 있는 toString() 재정의
@@ -67,4 +68,5 @@ public class Product {
 		
 		return super.equals(obj);
 	}
+
 }
