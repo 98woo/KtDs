@@ -18,6 +18,7 @@ public class Game {
 			Mineable worker = (Mineable) unit;
 			worker.mining();
 		}
+
 	}
 	
 	public static void main(String[] args) {
@@ -49,10 +50,10 @@ public class Game {
 		// scv의 메서드 mining() 사용불가 -> 인터페이스가 제공하지 않는 기능을 사용
 		// scv.mining();
 		System.out.println("-------------------");
-
-		
+		// scv는 Mineable 타입 변수에 대입 가능
 		move(scv);
 		System.out.println("-------------------");
+		// marine은 Mineable 타입 변수에 대입 불가
 		move(marine);
 	}
 }

@@ -4,7 +4,7 @@ package ref08_vending_machine_interface;
  * 환불기능이 있는 자판기
  */
 // 문제점1. VendingMachine과 코드 중복 -> extends VendingMachine
-// 문제점2. public void refund : 외부에서 호출 가능 -> interface에서 제거
+// 문제점2. public void refund : 비공개할 메서드 외부에서 호출 가능 -> interface에서 제거
 public class RefundableVendingMachine extends VendingMachine implements Sellable {
 	
 //	private Product[] productArray; 
