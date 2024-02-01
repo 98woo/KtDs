@@ -11,7 +11,7 @@ public class ScoreListGeneric<T> {
 	public ScoreListGeneric() {
 		this.scoreArray = new Object[2];
 	}
-	
+
 	/**
 	 * scoreArray 배열에 값을 추가
 	 * @param score 제네릭에 할당된 타입의 인스턴스 혹은 값

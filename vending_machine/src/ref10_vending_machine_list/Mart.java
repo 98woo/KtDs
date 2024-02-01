@@ -1,28 +1,37 @@
-package ref09_vending_machine_generic1;
+package ref10_vending_machine_list;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mart {
 	
 	public static void main(String[] args) {
 
-		Product[] productArray = new Product[3];
+		// 제품 개수의 제한이 사라짐
+		List<Product> productList = new ArrayList<>();
 		
-		productArray[0] = new Product();
-		productArray[0].setName("아메리카노");
-		productArray[0].setPrice(1000);
-		productArray[0].setQuantity(50);
+//		productList[0] = new Product();
+		Product product1 = new Product();
+		product1.setName("아메리카도");
+		product1.setName("아메리카노");
+		product1.setPrice(1000);
+		product1.setQuantity(50);
+		productList.add(product1);
 		
-		productArray[1] = new Product();
-		productArray[1].setName("카페라떼");
-		productArray[1].setPrice(2000);
-		productArray[1].setQuantity(30);
+		Product product2 = new Product();
+		product2.setName("카페라떼");
+		product2.setPrice(2000);
+		product2.setQuantity(30);
+		productList.add(product2);
 		
-		productArray[2] = new Product();
-		productArray[2].setName("에스프레소");
-		productArray[2].setPrice(1500);
-		productArray[2].setQuantity(20);
+		Product product3 = new Product();
+		product3.setName("에스프레소");
+		product3.setPrice(1500);
+		product3.setQuantity(20);
+		productList.add(product3);
 		
 		// <I> -> <Product> 로 명시되는 부분
-		Sellable<Product> machine = new VendingMachine<>(100_000, productArray);
+		Sellable<Product> machine = new VendingMachine<>(100_000, productList);
 		
 		// 익명클래스 사용
 		// 안드로이드, ios 개발방법, 스트링부트 -> App의 유연함을 위해서
@@ -87,7 +96,7 @@ public class Mart {
 		System.out.println("=================================");
 		
 		// 오버로딩
-		Sellable<Product> coffeeMachine = new RefundableVendingMachine<>(400, productArray);
+		Sellable<Product> coffeeMachine = new RefundableVendingMachine<>(400, productList);
 		
 		coffeeMachine.setInsertMoneyHandler(new InsertMoneyHandler<Product>() {
 			
