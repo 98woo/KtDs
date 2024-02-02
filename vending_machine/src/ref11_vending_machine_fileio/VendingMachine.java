@@ -2,7 +2,8 @@ package ref11_vending_machine_fileio;
 
 import java.util.List;
 
-import ref11_vending_machine_fileio.util.FileUtil;
+import constants.AppendType;
+import ref11_vending_machine_fileio.util.NIOFileUtil;
 
 /**
  * <b>환불 불가능한 자판기</b>
@@ -17,6 +18,7 @@ public class VendingMachine<I> implements Sellable<I> {
 	
 	// 멤버변수
 	// Object[] 사용 x -> 인스턴스가 가진 기능을 써야함
+	// balance = money 
 	private List<I> productArray; 
 	private int balance;
 	
@@ -60,7 +62,8 @@ public class VendingMachine<I> implements Sellable<I> {
 	@Override
 	public void addProduct(String productName, int price, int quantity) {
 		String description = String.join(",", productName, price + "", quantity + "");
-		FileUtil.writeFile("C:\\Java Exam", "goods.csv", description, true);
+//		FileUtil.writeFile("C:\\Java Exam", "goods.csv", description, true);
+		NIOFileUtil.writeFile("C:\\Java Exam", "goods.csv", description, AppendType.APPEND);
 	}
 
 	@Override
