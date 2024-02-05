@@ -18,6 +18,7 @@ public class VendingMachine<I> implements Sellable<I> {
 	
 	// 멤버변수
 	// Object[] 사용 x -> 인스턴스가 가진 기능을 써야함
+	
 	// balance = money 
 	private List<I> productArray; 
 	private int balance;
