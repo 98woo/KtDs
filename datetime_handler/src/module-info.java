@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module datetime_handler {
-}

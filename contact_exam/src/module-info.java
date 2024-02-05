@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module contact_exam {
-}
