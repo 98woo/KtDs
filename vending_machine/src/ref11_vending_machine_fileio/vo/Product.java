@@ -1,4 +1,4 @@
-package ref11_vending_machine_fileio;
+package ref11_vending_machine_fileio.vo;
 /**
  * 데이터 클래스는 getter/setter를 제외하고 기능을 추가하지 않는다
  * 기능을 추가하게 되면, 데이터 클래스임을 알 수 없게 된다.

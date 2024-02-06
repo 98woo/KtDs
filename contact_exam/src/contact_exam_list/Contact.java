@@ -7,7 +7,7 @@ import java.util.List;
 public class Contact {
 
 	private String name;
-	private List<String> phoneNumber;
+	private String phoneNumber;
 	private String birthDay;
 	private String relation;
 	private String isBlock;
@@ -24,12 +24,12 @@ public class Contact {
 	}
 
 
-	public List<String> getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
 
-	public void setPhoneNumber(List<String> phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -83,18 +83,8 @@ public class Contact {
 		this.memo = memo;
 	}
 
-	public static void main(String[] args) {
-		List<String> contactList = new ArrayList<>();
-		List<String> contactDetailList = List.of("", "010", "24", "d", "0", "28", "q");
-		if (contactDetailList.get(contactDetailList.size() - 6).equals("")) {
-			System.out.println("이름을 입력하세요.");
-			
-		}
-		
+
 
 		
 		
-		
-
-	}
 }

@@ -1,8 +1,12 @@
-package ref11_vending_machine_fileio;
+package ref11_vending_machine_fileio.machines;
 
 import java.util.List;
 
 import constants.AppendType;
+import ref11_vending_machine_fileio.handlers.InsertMoneyHandler;
+import ref11_vending_machine_fileio.handlers.PressButtonHandler;
+import ref11_vending_machine_fileio.handlers.PrintHandler;
+import ref11_vending_machine_fileio.inf.Sellable;
 import ref11_vending_machine_fileio.util.NIOFileUtil;
 
 /**
@@ -105,7 +109,7 @@ public class VendingMachine<I> implements Sellable<I> {
 	}
 
 	// RefundableVendingMachine에서 상속 가능
-	protected void refund(Customer customer, int refundMoney) {
+	public void refund(Customer customer, int refundMoney) {
 		System.out.println("재고가 없네요.");
 		System.out.println("환불은 불가능합니다.");
 	}

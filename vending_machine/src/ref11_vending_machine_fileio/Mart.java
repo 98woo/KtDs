@@ -2,7 +2,15 @@ package ref11_vending_machine_fileio;
 
 import java.util.List;
 
+import ref11_vending_machine_fileio.customers.Customer;
+import ref11_vending_machine_fileio.handlers.InsertMoneyHandler;
+import ref11_vending_machine_fileio.handlers.PressButtonHandler;
+import ref11_vending_machine_fileio.handlers.PrintHandler;
+import ref11_vending_machine_fileio.inf.Sellable;
+import ref11_vending_machine_fileio.machines.RefundableVendingMachine;
+import ref11_vending_machine_fileio.machines.VendingMachine;
 import ref11_vending_machine_fileio.util.FileUtil;
+import ref11_vending_machine_fileio.vo.Product;
 
 public class Mart {
 	
@@ -32,6 +40,7 @@ public class Mart {
 		});
 	}
 	
+	// 익명 클래스 (앱 개발할 때 익명 클래스가 굉장히 많이 쓰인다.)
 	public static void initiatePressButtonHandler(Sellable<Product> sellable) {
 		sellable.setPressButtonHandler(new PressButtonHandler<Product>() {
 			@Override

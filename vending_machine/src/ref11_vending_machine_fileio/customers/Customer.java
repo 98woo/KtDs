@@ -1,7 +1,9 @@
-package ref11_vending_machine_fileio;
+package ref11_vending_machine_fileio.customers;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ref11_vending_machine_fileio.vo.Product;
 
 public class Customer {
 

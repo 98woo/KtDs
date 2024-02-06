@@ -1,4 +1,4 @@
-package ref11_vending_machine_fileio;
+package ref11_vending_machine_fileio.vo;
 
 public class TemperatureProduct extends Product {
 

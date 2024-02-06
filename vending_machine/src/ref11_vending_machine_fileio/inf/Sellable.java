@@ -1,6 +1,11 @@
-package ref11_vending_machine_fileio;
+package ref11_vending_machine_fileio.inf;
 
 import java.util.List;
+
+import ref01_vending_machine.Customer;
+import ref09_vending_machine_generic1.PrintHandler;
+import ref11_vending_machine_fileio.handlers.InsertMoneyHandler;
+import ref11_vending_machine_fileio.handlers.PressButtonHandler;
 
 // 
 public interface Sellable<I> {

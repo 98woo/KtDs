@@ -1,4 +1,7 @@
-package ref11_vending_machine_fileio;
+package ref11_vending_machine_fileio.handlers;
+
+import ref11_vending_machine_fileio.customers.Customer;
+import ref11_vending_machine_fileio.machines.VendingMachine;
 
 public interface PressButtonHandler<I> {
 //	if(product.equals(productName)) {
