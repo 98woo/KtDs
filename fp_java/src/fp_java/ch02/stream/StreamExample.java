@@ -22,6 +22,7 @@ public class StreamExample {
 		 * flatMap 은 다른 파일을 읽어올 때 쓴다. 배열을 출력해야 할 때 forEach 에 for 문을 사용하면 코드가 길어지기 때문에 이런 경우에도 flatMap을 사용하기도 한다.
 		 * peek = Consumer<T> 스트림이 어떻게 흘러가는지 보여준다.(디버그하는 용도로 주로 사용됨) 
 		 */
+		
 		List<String> lowCaloricDishesName = 
 			// List<Dish> -> Stream<Dish> 로 변경
 			menu.stream()
