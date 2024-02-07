@@ -8,7 +8,7 @@ public class CustomInfMain {
 		int airlineResult = airline.getFee(1);
 		System.out.println(airlineResult);
 		
-		int airlineResult2 = airline.getChildFee(airlineResult);
+		int airlineResult2 = airline.getChildFee(1);
 		System.out.println(airlineResult2);
 		
 		System.out.println();
