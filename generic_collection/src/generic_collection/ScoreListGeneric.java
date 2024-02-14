@@ -1,5 +1,8 @@
 package generic_collection;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class ScoreListGeneric<T> {
 	
 	// ScoreList가 관리할 배열
@@ -58,11 +61,20 @@ public class ScoreListGeneric<T> {
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		sb.append("ScoreList [ ");
-		// null값은 출력x -> 값이 들어있는 크키만큼만 반복해라
-		for(int i = 0; i < size; i++) {
-			sb.append(scoreArray[i] + " ");
-		}
+//		// null값은 출력x -> 값이 들어있는 크키만큼만 반복해라
+//		for(int i = 0; i < size; i++) {
+//			sb.append(scoreArray[i] + ", ");
+//		}
+		String items = Arrays.stream(this.scoreArray)
+			  .filter(object -> object != null)
+			  .map(object -> object + "")
+			  .collect(Collectors.joining(", "));
+		sb.append(items);
+		// Stream 으로 변경 끝
+		
 		sb.append("]"); 
 		return sb.toString();
+		// Stream 으로 변경해보기
+		
 	}
 }
