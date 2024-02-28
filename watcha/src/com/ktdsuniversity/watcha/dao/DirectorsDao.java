@@ -1,4 +1,6 @@
-package com.ktdsuniversity.watcha.dao;
+package com.ktdsuniversAity.watcha.dao;
+
+import java.util.List;
 
 import com.ktdsuniversity.watcha.util.DBSupporter;
 import com.ktdsuniversity.watcha.vo.DirectorsVO;
@@ -21,6 +23,16 @@ public class DirectorsDao {
 		query.append(", ? /*PROFILE*/) ");
 		
 		return dbSupporter.insert(query.toString(), new Object[] {newDirectorsVO.getName(), newDirectorsVO.getProfile() });
+		
+	}
+	
+	public List<DirectorsVO> selectAllDirectors(DBSupporter dbSupporter) {
+		
+		StringBuffer query = new StringBuffer();
+		query.append(" SELECT * ");
+		query.append("   FROM DIRECTORS ");
+		
+		return dbSupporter.selectList(query.toString(), null, DirectorsVO.class);
 		
 	}
 }

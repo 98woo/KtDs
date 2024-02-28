@@ -4,9 +4,6 @@ import com.ktdsuniversity.watcha.service.DirectorsService;
 
 public class DirectorsHandler {
 
-
-	
-	
 	public static void main(String[] args) {
 		DirectorsService directorsService = new DirectorsService();
 		boolean wasCreate = directorsService.createNewDirector("장항준", "장항준.png");
