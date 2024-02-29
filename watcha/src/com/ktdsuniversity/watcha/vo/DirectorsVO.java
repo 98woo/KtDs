@@ -8,17 +8,17 @@ import java.util.List;
  */
 public class DirectorsVO {
 
-	private String directorsId;
+	private String directorId;
 	private String name;
 	private String profile;
 	
 	private List<MoviesVO> movies;
 	
-	public String getDirectorsId() {
-		return directorsId;
+	public String getDirectorId() {
+		return directorId;
 	}
-	public void setDirectorsId(String directorsId) {
-		this.directorsId = directorsId;
+	public void setDirectorId(String directorId) {
+		this.directorId = directorId;
 	}
 	
 	public String getName() {

@@ -1,4 +1,4 @@
-package com.ktdsuniversAity.watcha.dao;
+package com.ktdsuniversity.watcha.dao;
 
 import java.util.List;
 

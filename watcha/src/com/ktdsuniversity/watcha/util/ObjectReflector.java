@@ -33,6 +33,13 @@ public class ObjectReflector {
 		SET_TYPES.put(float.class, (i, pstmt, param) -> pstmt.setFloat(i, Float.parseFloat(param)));
 		SET_TYPES.put(double.class, (i, pstmt, param) -> pstmt.setDouble(i, Double.parseDouble(param)));
 		SET_TYPES.put(boolean.class, (i, pstmt, param) -> pstmt.setBoolean(i, Boolean.parseBoolean(param)));
+		SET_TYPES.put(Byte.class, (i, pstmt, param) -> pstmt.setByte(i, Byte.parseByte(param)));
+		SET_TYPES.put(Short.class, (i, pstmt, param) -> pstmt.setShort(i, Short.parseShort(param)));
+		SET_TYPES.put(Integer.class, (i, pstmt, param) -> pstmt.setInt(i, Integer.parseInt(param)));
+		SET_TYPES.put(Long.class, (i, pstmt, param) -> pstmt.setLong(i, Long.parseLong(param)));
+		SET_TYPES.put(Float.class, (i, pstmt, param) -> pstmt.setFloat(i, Float.parseFloat(param)));
+		SET_TYPES.put(Double.class, (i, pstmt, param) -> pstmt.setDouble(i, Double.parseDouble(param)));
+		SET_TYPES.put(Boolean.class, (i, pstmt, param) -> pstmt.setBoolean(i, Boolean.parseBoolean(param)));
 		SET_TYPES.put(String.class, (i, pstmt, param) -> pstmt.setString(i, param));
 		
 		GET_TYPES = new HashMap<>();
@@ -43,6 +50,13 @@ public class ObjectReflector {
 		GET_TYPES.put(float.class, (rs, columnName) -> rs.getFloat(columnName));
 		GET_TYPES.put(double.class, (rs, columnName) -> rs.getDouble(columnName));
 		GET_TYPES.put(boolean.class, (rs, columnName) -> rs.getBoolean(columnName));
+		GET_TYPES.put(Byte.class, (rs, columnName) -> rs.getByte(columnName));
+		GET_TYPES.put(Short.class, (rs, columnName) -> rs.getShort(columnName));
+		GET_TYPES.put(Integer.class, (rs, columnName) -> rs.getInt(columnName));
+		GET_TYPES.put(Long.class, (rs, columnName) -> rs.getLong(columnName));
+		GET_TYPES.put(Float.class, (rs, columnName) -> rs.getFloat(columnName));
+		GET_TYPES.put(Double.class, (rs, columnName) -> rs.getDouble(columnName));
+		GET_TYPES.put(Boolean.class, (rs, columnName) -> rs.getBoolean(columnName));
 		GET_TYPES.put(String.class, (rs, columnName) -> rs.getString(columnName));
 	}
 	

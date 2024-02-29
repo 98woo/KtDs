@@ -17,6 +17,7 @@ public class MoviesVO {
 	
 	// Has a
 	private List<DirectorsVO> directors;
+	private List<CastsVO> casts;
 
 	public String getMovieId() {
 		return movieId;
