@@ -35,4 +35,13 @@ public class DirectorsDao {
 		return dbSupporter.selectList(query.toString(), null, DirectorsVO.class);
 		
 	}
+
+	public List<DirectorsVO> selectDirectorsByName(DBSupporter dbSupporter, String name) {
+		StringBuffer query = new StringBuffer();
+		query.append(" SELECT * ");
+		query.append("   FROM DIRECTORS ");
+		query.append("  WHERE NAME LIKE '%' || ? || '%' ");
+		
+		return dbSupporter.selectList(query.toString(), new Object[] {name}, DirectorsVO.class);
+	}
 }

@@ -18,6 +18,26 @@ public class MoviesVO {
 	// Has a
 	private List<DirectorsVO> directors;
 	private List<CastsVO> casts;
+	/**
+	 * 영화의 평점 목록	
+	 */
+	private List<RatingsVO> ratings; 
+
+	public List<CastsVO> getCasts() {
+		return casts;
+	}
+
+	public void setCasts(List<CastsVO> casts) {
+		this.casts = casts;
+	}
+
+	public List<RatingsVO> getRatings() {
+		return ratings;
+	}
+
+	public void setRatings(List<RatingsVO> ratings) {
+		this.ratings = ratings;
+	}
 
 	public String getMovieId() {
 		return movieId;
@@ -107,5 +127,32 @@ public class MoviesVO {
 		this.directors = directors;
 	}
 	
+	public void printSimpleDescription() {
+		StringBuffer result = new StringBuffer();
+		result.append("영화ID " + this.movieId);
+		result.append("제목: " + this.title);
+		result.append("개봉연도: " + this.openYear);
+		
+		System.out.println(result.toString());
+	}
+
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer();
+		
+		result.append("영화ID: " + this.movieId);
+		result.append("제목: " + this.title);
+		result.append("개봉연도: " + this.openYear);
+		result.append("관람등급: " + this.minimumAge);
+		result.append("장르: " + this.genre);
+		result.append("분위기: " + this.atmosphere);
+		result.append("상영시간: " + this.runningTime);
+		result.append("촬영국가: " + this.location);
+		result.append("내용: " + this.summary);
+		result.append("영화포스터: " + this.poster);
+		return super.toString();
+	}
+	
+
 	
 }

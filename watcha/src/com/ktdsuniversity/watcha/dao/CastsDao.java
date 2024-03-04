@@ -28,4 +28,15 @@ public class CastsDao {
 																, castsVO.getCharacterName()
 																, castsVO.getMainActorYn()});
 	}
+
+	public int deletedCastsByMovieId (DBSupporter dbSupporter, String movieId) {
+		
+		
+		StringBuffer query = new StringBuffer();
+		query.append(" DELETE MOVIES ");
+		query.append("   FROM MOIVES ");
+		query.append("  WHERE MOVIE_ID = ? ");
+		
+		return dbSupporter.delete(query.toString(), new Object[] {movieId});
+	}
 }

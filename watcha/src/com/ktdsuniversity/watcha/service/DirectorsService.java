@@ -63,4 +63,22 @@ public class DirectorsService {
 		dbSupporter.close();
 		return directors;
 	}
+
+	public List<DirectorsVO> findAllDirectors() {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open(); // Database에 연결하는 역할. Autocommit 비활성화 처리. (메뉴얼커밋)
+		
+		List<DirectorsVO> directors = this.directorsDao.selectAllDirectors(dbSupporter);
+		
+		return null;
+	}
+
+	public DirectorsVO findDirectorById(String directorsId) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open(); // Database에 연결하는 역할. Autocommit 비활성화 처리. (메뉴얼커밋)
+		
+		List<DirectorsVO> directors = this.directorsDao.selectDirectorsByName(dbSupporter);
+		
+		return null;
+	}
 }

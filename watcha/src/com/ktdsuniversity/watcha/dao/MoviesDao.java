@@ -58,4 +58,100 @@ public class MoviesDao {
 		
 		return dbSupporter.selectList(query.toString(), new Object[] {directorId}, MoviesVO.class);
 	}
+	
+	public List<MoviesVO> selectAllMovies(DBSupporter dbSupporter) {
+		
+		StringBuffer query = new StringBuffer();
+			query.append(" SELECT MOVIE_ID ");
+			query.append("      , TITLE ");
+			query.append(" 		, MINIMUM_AGE ");
+			query.append(" 		, OPEN_YEAR ");
+			query.append(" 		, RUNNING_TIME ");
+			query.append(" 		, GENRE ");
+			query.append(" 		, ATMOSPHERE "); 
+			query.append(" 		, LOCATION ");
+			query.append(" 		, SUMMARY ");
+			query.append(" 		, POSTER "); 
+			query.append("   FROM MOVIES "); 
+			query.append("  ORDER BY MOVIE_ID DESC ");
+		
+		return dbSupporter.selectList(query.toString(), null, MoviesVO.class);
+	}
+
+	public List<MoviesVO> selectMoviesByTitle(DBSupporter dbSupporter, String movieTitle) {
+		
+		StringBuffer query = new StringBuffer();
+		query.append(" SELECT MOVIE_ID ");
+		query.append("      , TITLE ");
+		query.append(" 		, MINIMUM_AGE ");
+		query.append(" 		, OPEN_YEAR ");
+		query.append(" 		, RUNNING_TIME ");
+		query.append(" 		, GENRE ");
+		query.append(" 		, ATMOSPHERE "); 
+		query.append(" 		, LOCATION ");
+		query.append(" 		, SUMMARY ");
+		query.append(" 		, POSTER "); 
+		query.append("   FROM MOVIES "); 
+		query.append("  WHERE TITLE LIKE '%' || ? || '%' ");  // ? 때문에 오류가 발생한다. 값 형태 때문. ? 자체가 문자로 판별된다. 자바에서 연동할 때는 '%' || ? || '%' 이렇게 작성해야 한다.
+		query.append("  ORDER BY MOVIE_ID DESC ");
+		return dbSupporter.selectList(query.toString(), new Object[] {movieTitle}, MoviesVO.class);
+	}
+
+	public MoviesVO selectMoviesById(DBSupporter dbSupporter, String movieId) {
+		
+		StringBuffer query = new StringBuffer();
+		query.append(" SELECT MOVIE_ID ");
+		query.append("      , TITLE ");
+		query.append(" 		, MINIMUM_AGE ");
+		query.append(" 		, OPEN_YEAR ");
+		query.append(" 		, RUNNING_TIME ");
+		query.append(" 		, GENRE ");
+		query.append(" 		, ATMOSPHERE "); 
+		query.append(" 		, LOCATION ");
+		query.append(" 		, SUMMARY ");
+		query.append(" 		, POSTER "); 
+		query.append("   FROM MOVIES "); 
+		query.append("  WHERE MOVIE_ID = ? "); 
+
+		return dbSupporter.selectOne(query.toString(), new Object[] {movieId}, MoviesVO.class);
+	}
+
+	public int updateOneMoive(DBSupporter dbSupporter, MoviesVO moviesVO) {
+		
+		StringBuffer query = new StringBuffer();
+		query.append(" UPDATE MOVIES ");
+		query.append("    SET TITLE = ? ");
+		query.append("  	, MINIMUM_AGE = ? ");
+		query.append(" 	    , OPEN_YEAR = ? ");
+		query.append(" 	    , RUNNING_TIME = ? ");
+		query.append(" 	    , GENRE = ? ");
+		query.append(" 	    , ATMOSPHERE = ? ");
+		query.append(" 	    , LOCATION = ? ");
+		query.append(" 	    , SUMMARY = ? ");
+		query.append(" 	    , POSTER = ? ");
+		query.append("  WHERE MOVIE_ID = ? ");
+		
+		return dbSupporter.update(query.toString(), new Object[] {
+				moviesVO.getTitle(),
+				moviesVO.getMinimumAge(),
+				moviesVO.getOpenYear(),
+				moviesVO.getRunningTime(),
+				moviesVO.getGenre(),
+				moviesVO.getAtmosphere(),
+				moviesVO.getLocation(),
+				moviesVO.getSummary(),
+				moviesVO.getPoster(),
+				moviesVO.getMovieId()
+		});
+	}
+
+	
+	
+
+
+	public int updateOneMoive(DBSupporter dbSupporter, String movieId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 }
