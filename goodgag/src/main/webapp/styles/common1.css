@@ -1,0 +1,350 @@
+/*
+    html의 모든 tag는 전부 다 box model이다.
+    * -> 모든 태그를 의미한다. 
+*/
+
+* {
+  box-sizing: border-box;  
+}
+
+html {
+    height: 100%;
+}
+
+
+body {
+    background-color: dimgray;
+    background-image: url("../assets/bg.png");
+    margin: 0;
+    height: 100%;
+}
+
+.go-to-top {
+    position: fixed;
+    bottom: 200px;
+    right: 250px;
+    text-align: center;
+    background-color: #fff6;
+    /* padding: 10px; */
+    padding: 0.65rem; /* 16px */
+    cursor: pointer;
+}
+
+.go-to-top p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container {
+    background-color: white;
+    /* margin-left: 300px;
+    margin-right: 300px; */
+    /* margin: 10px 3px 20px 5px; t r b l 시계방향 */
+    margin: 0 auto;
+    width: 50%px; /* 600px */
+    /* min-width: 344px; */
+    min-width: 21rem;
+    /* max-width: 600px; */
+    max-width: 42rem;
+    height: 100%;
+}
+
+/* div {
+    background-color: aqua;
+} */
+
+.header {
+    position: fixed;
+    /* width: 600px; */
+    width: 50%;
+    min-width: 21rem;
+    max-width: 42rem;
+    z-index: 2;
+
+    background-color: lightgray;
+    /* width: 500px;
+    border: 10px solid red;
+    padding: 30px;
+    margin: 100px; */
+}
+
+.header-logo {
+    background-color: #fed50a;
+}
+
+.header-logo-list-item:last-child(2) {
+    position: absolute;
+    right: 57px;
+}
+
+.header-logo-list-item:last-child {
+    position: absolute;
+    right: 5px;
+}
+
+/* 이 방식이 적성이다. */ 
+/* .header-logo-list-item {
+    display: inline-block;
+    width: 48%;
+}
+
+.header-logo-list-item:last-child {
+    text-align: center;
+} */
+
+/* .header-logo-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.header-logo-list-item {
+
+    margin-right: 5px;
+} */
+
+/* .header-logo-list-item:first-child {
+    float: left;
+    margin-left: 10px;
+}
+
+.header-logo-list-item:nth-child(3) {
+    float: right;
+    margin-top: 5px;
+}
+
+.header-logo-list-item:nth-child(2) {
+    float: right;
+    margin-top: 5px;
+} */
+
+.header-category {
+    background-color: whitesmoke;
+}
+
+.header-category-list {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.header-category-list-item {
+    display: inline-block;
+    width: 49.5%;
+    /* height: 40px; */
+    /* padding: 13px; */
+    padding: 0.8rem;
+    /* font-style: oblique; */
+    vertical-align: top;
+}
+
+.header-category-list-item:hover {
+    font-weight: bold;
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.header-category-list-item:active {
+    /* font-size: 300%; */
+    font-size: 3rem;
+}
+
+.header-logo-image {
+    vertical-align: middle;
+}
+
+.header-category-active-item {
+    font-weight: bold;
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+.content {
+    margin-top: 97.27px;
+    background-color: white;
+    height: calc(100% - 98px - 83px - 54px - 10px);
+}
+
+.content-article {
+    position: relative;
+
+    background-color: white;
+    /* padding: 10px; */
+    padding-bottom: 10px;
+    margin: 10px;
+    margin-right: 0;
+    /* border: 1px solid lightgray; */
+    border-bottom: 1px solid lightgray;
+}
+
+.content-article:first-child {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.content-article:last-child {
+    border-bottom: 0px;
+}
+
+.best-article {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: #f00;
+    padding: 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+}
+
+.content-article-title {
+    font-weight: normal;
+    color: black;
+    margin: 0;
+}
+
+.content-article-title-reply-count {
+    color: coral;
+    font-size: 0.8rem;
+}
+
+.content-article-author-info-list {
+    padding: 0;
+    margin: 0;
+}
+
+.content-article-author {
+    color: brown;
+    display: inline-block;
+}
+
+.content-article-author::after {
+    content: "|";
+    padding-left: 10px;
+    color: #dddddd;
+}
+
+.content-article-number {
+    color: gray;
+    display: inline-block;
+}
+
+.content-article-create-date {
+    color: gray;
+    display: inline-block;
+}
+
+.content-article-create-date::before {
+    content: "|";
+    padding-right: 10px;
+    color: #dddddd;
+}
+
+.search-area {
+    padding: 10px;
+    text-align: center;
+}
+
+.search-form {
+    background-color: #F001;
+    padding: 10px;
+}
+
+.search-title {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.search-input {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #CCC;
+    vertical-align: middle;
+}
+
+.search-input:focus {
+    outline: 0px;
+}
+
+.search-button {
+    background-color: #1a1af7;
+    padding: 8px;
+    border-radius: 3px;
+    border: 0px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.paginator {
+    background-color: lightgray;
+    padding: 20px 0;
+    /* Paginator의 자식 앨리먼트들을 수평(가운데) 정렬한다. */
+    text-align: center;
+}
+
+.paginator-list {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.paginator-page-number {
+    background-color: aliceblue;
+    color: lightgrey;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.paginator-active-page {
+    color: red;
+    border: 1px solid red;
+}
+
+.footer {
+    background-color: black;
+    color: gray;
+}
+.footer-button-area {
+    text-align: center;
+}
+
+.footer-button-area-login-btn {
+    background-color: darkgray;
+    font-size: 20px;
+
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+
+/* a {
+    color: #333333;
+    text-decoration: none;
+} */
+
+/* 링크 스타일을 변경 */
+a:link {
+    color: #333333;
+    text-decoration: none;
+}
+/* 방문한 적이 있는 링크에 대한 스타일을 변경 */
+a:visited {
+    color: #0000ff;
+}
+/* 링크를 클릭할 때의 스타일을 변경 */
+a:active {
+    color: #ff0000;
+}
+/* 링크에 마우스를 올렸을 때 스타일 변경 */
+a:hover {
+    font-weight: bold;
+}
+
+.clear-line {
+    clear: both;
+}

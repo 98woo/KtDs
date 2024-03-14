@@ -1,0 +1,58 @@
+/* viewport(브라우저)의 크기가 21rem (336px) 보다 작다면
+    아래에 있는 스타일을 적용하라. */
+    /* @media (max-width: 21rem) {
+        .go-to-top {
+            display: none;
+        }
+} */
+
+/* viewport(브라우저)의 크기가 78rem (1250px) 보다 작다면
+    아래에 있는 스타일을 적용하라. */
+    @media (max-width: 78rem) {
+        .go-to-top {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 25.75rem) {
+        .search-title {
+            display: block;
+            margin-top: 1rem;
+        }
+        .search-input {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .search-button {
+            display: block;
+            width: 100%;
+        }
+
+        .best-article {
+            top: 2rem;
+        }
+       
+        .header-category-list {
+            flex-direction: column;
+        }
+
+        .header-category-list-item {
+            
+        }
+
+        .content {
+            margin-top: 8.9rem;
+        }
+        
+
+        .hamburger {
+            display: inline-block;
+        }
+
+        .header-logo-list-item:nth-child(3), 
+        .header-logo-list-item:nth-chid(4) {
+            display: none;
+        }
+
+
+    }
